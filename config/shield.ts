@@ -40,7 +40,7 @@ export const csp: ShieldConfig['csp'] = {
   |
   | @example
   | directives: {
-  |   defaultSrc: ['self', '@nonce', 'cdnjs.cloudflare.com']
+  |   defaultSrc: ["'self'", '@nonce', 'cdnjs.cloudflare.com']
   | }
   |
   */
@@ -88,7 +88,7 @@ export const csrf: ShieldConfig['csrf'] = {
 	|
 	| Also you can define a function that is evaluated on every HTTP Request.
 	| ```
-	|  exceptRoutes: ({ request }) => request.url.includes('/api')
+	|  exceptRoutes: ({ request }) => request.url().includes('/api')
 	| ```
   |
   */
