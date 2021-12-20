@@ -2,7 +2,7 @@
   "typescript": true,
   "commands": [
     "./commands",
-    "@adonisjs/core/build/commands",
+    "@adonisjs/core/build/commands/index.js",
     "@adonisjs/repl/build/commands"
   ],
   "exceptionHandlerNamespace": "App/Exceptions/Handler",
@@ -17,10 +17,7 @@
     "./start/kernel",
     {
       "file": "./start/mongoose",
-      "environment": [
-        "web",
-        "repl"
-      ]
+      "environment": ["web", "repl"]
     }
   ],
   "providers": [
@@ -41,7 +38,5 @@
       "reloadServer": false
     }
   ],
-  "aceProviders": [
-    "@adonisjs/repl"
-  ]
+  "aceProviders": ["@adonisjs/repl"]
 }
