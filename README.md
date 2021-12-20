@@ -14,5 +14,22 @@ Make sure to read the documentation for the [Custom user provider](https://docs.
 - Run `npm install` to install the dependencies
 - Copy the `.env.example` file to `.env`
 - Make sure you have MongoDB installed and double check the `start/mongoose.ts` file to check the connection details
-- Create a dummy user using the REPL.
+- Create a dummy user using the REPL. ( See below )
 - Open browser and try login
+
+## Creating a dummy user
+
+Enter repl
+```bash
+node ace repl
+```
+
+Import the User model
+```bash
+import User from 'App/models/User'
+```
+
+Create the new dummy User
+```
+User.create({email: 'test@example.com', password: 'test123123'})
+```
