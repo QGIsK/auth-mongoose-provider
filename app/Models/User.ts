@@ -9,8 +9,15 @@ type User = {
 }
 
 const UserSchema = new mongoose.Schema<User>({
-  email: String,
-  password: String,
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
   rememberMeToken: String,
 })
 
