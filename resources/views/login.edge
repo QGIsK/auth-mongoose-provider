@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   @entryPointStyles('app')
   @entryPointScripts('app')
 </head>
+
 <body>
 
   <main>
@@ -20,7 +22,7 @@
           <input type="text" name="uid" placeholder="Enter email address">
           <p>
             @if(flashMessages.has('auth.errors.uid'))
-              {{ flashMessages.get('auth.errors.uid') }}
+            {{ flashMessages.get('auth.errors.uid') }}
             @end
           </p>
         </div>
@@ -28,10 +30,10 @@
         <div>
           <label for="password"> Password </label>
           <br>
-          <input type="password" name="password" placeholder="Enter account password">
+          <input type="password" name="password" placeholder="Enter password">
           <p>
             @if(flashMessages.has('auth.errors.password'))
-              {{ flashMessages.get('auth.errors.password') }}
+            {{ flashMessages.get('auth.errors.password') }}
             @end
           </p>
         </div>
@@ -42,4 +44,5 @@
   </main>
 
 </body>
+
 </html>
