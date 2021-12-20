@@ -9,4 +9,6 @@
 */
 
 import mongoose from 'mongoose'
-mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true })
+import Env from '@ioc:Adonis/Core/Env'
+
+mongoose.connect(Env.get('MONGO_URL', 'mongodb://localhost:27017/adonis'))
